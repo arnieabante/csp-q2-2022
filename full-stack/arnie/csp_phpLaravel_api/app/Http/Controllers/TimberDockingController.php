@@ -95,7 +95,7 @@ class TimberDockingController extends Controller
             if($isSizeValid && ($size < 3 || $size > 12)){
                 $isSizeValid = false;
                 $isValid = false;
-                $errorReason = "Child parts is shorter than 3 metres or longer than 12 metres";
+                $errorReason = "Child part is shorter than 3 metres or longer than 12 metres";
             }
 
             //validate incremented value if > 0.3
@@ -106,7 +106,7 @@ class TimberDockingController extends Controller
                 if($isIncrementedValid && $incremented < 0.3){
                     $isIncrementedValid = false;
                     $isValid = false;
-                    $errorReason = "Child parts are not in increments of 0.3.";
+                    $errorReason = "Child parts are not in increment within the range of 0.3.";
                 }
                 $lastSize = $size;
             }
