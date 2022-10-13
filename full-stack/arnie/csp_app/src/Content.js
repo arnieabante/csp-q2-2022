@@ -157,7 +157,7 @@ let Content = () => {
                                         </Row>
                                     </Tab>
                                     <Tab eventKey="json" title="JSON Format">
-                                        {state.outputJson.length === 0?'':JSON.stringify(state.ouputJson)}
+                                        {state.outputJson.length === 0?'':JSON.stringify(state.outputJson)}
                                     </Tab>
                                 </Tabs>
                             </Card.Body>
