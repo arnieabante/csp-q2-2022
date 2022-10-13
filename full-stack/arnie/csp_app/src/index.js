@@ -8,7 +8,11 @@ import reportWebVitals from './reportWebVitals';
 import "../node_modules/react-bootstrap/dist/react-bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-window.api_url = "http://127.0.0.1:8000/";
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  window.api_url = "http://127.0.0.1:8000/";
+} else{
+  window.api_url = "http://127.0.0.1/csp_app_build/api/public/";
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
