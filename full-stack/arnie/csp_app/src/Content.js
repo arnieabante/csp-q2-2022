@@ -79,7 +79,8 @@ let Content = () => {
         setState({
             outputJson: [],
             isProcessing:false,
-            errorMsg:''
+            errorMsg:'',
+            jsonField:''
         });
     };
 
@@ -112,7 +113,7 @@ let Content = () => {
                                 <Tabs defaultActiveKey="table" className='mb-3'>
                                     <Tab eventKey="table" title="Tabular Format">
                                         <Row>
-                                            <Col>
+                                            <Col md={12}>
                                                 <Table stripped bordered hover>
                                                     <thead>
                                                         <tr>
@@ -120,7 +121,7 @@ let Content = () => {
                                                             <th>Transformation</th>
                                                             <th>Balance</th>
                                                             <th>Is Valid</th>
-                                                            <th>Error Reason</th>
+                                                             <th>Error Reason</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -133,7 +134,7 @@ let Content = () => {
                                                                         <td>
                                                                             {JSON.stringify(output.transformation)}
                                                                         </td>
-                                                                        <td>{output.balance}</td>
+                                                                        <td>{output.balance.toFixed(2)}</td>
                                                                         <td>{output.isValid?'true':'false'}</td>
                                                                         <td>{output.errorReason===null?'null':output.errorReason}</td>
                                                                     </tr>
